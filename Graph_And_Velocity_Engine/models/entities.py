@@ -2,8 +2,6 @@
 VeriLedger — Canonical Entity Schema
 =====================================
 THIS IS THE SHARED CONTRACT. Field names here must match exactly across:
-  - Person 3's synthetic dataset (CSV / JSON)
-  - Person 1's LLM extraction output
   - Graph node/edge keys (graph/forgery_graph.py)
   - Velocity Engine time-series keys (velocity/engine.py)
 

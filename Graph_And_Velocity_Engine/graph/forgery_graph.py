@@ -1,6 +1,6 @@
 """
 VeriLedger — Forgery Network Graph
-====================================
+======================================
 Builds a graph where:
   - Nodes  = documents
   - Edges  = shared entities (survey numbers, signatories, registration offices, etc.)

@@ -1,6 +1,6 @@
 """
 VeriLedger — Behavioral Velocity Engine
-==========================================
+============================================
 Detects statistically implausible timelines in per-applicant time-series data.
 
 Rules applied:

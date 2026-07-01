@@ -20,7 +20,7 @@ Design decisions:
 
 Usage (in api/main.py):
     from db.store import VeriLedgerStore
-    store = VeriLedgerStore()          # call once at startup
+    store = VeriLedgerStore()          
     store.save_document(doc)
     store.save_velocity_events(events)
     docs   = store.load_all_documents()

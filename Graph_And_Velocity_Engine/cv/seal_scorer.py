@@ -15,8 +15,6 @@ Method: pure heuristics, no trained model.
   3. Aspect ratio      — near-square bounding box (circle fits in square)
   4. Ink coverage      — fraction of dark pixels; sparse = low-quality scan or fake
   5. Symmetry score    — left/right and top/bottom pixel symmetry
-
-All installed: Pillow, NumPy, SciPy (available per tech stack).
 """
 
 from __future__ import annotations

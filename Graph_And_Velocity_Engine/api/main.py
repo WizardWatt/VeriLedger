@@ -1,12 +1,3 @@
-"""
-VeriLedger — FastAPI Backend
-==============================
-All endpoints.  Person 1 will call /ingest/ocr-output from their OCR pipeline.
-Person 3's UI will call /report/{document_id} and /graph.
-
-Run: uvicorn api.main:app --reload --port 8000
-"""
-
 from __future__ import annotations
 import json
 import sys
@@ -51,10 +42,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ── Persistence ──────────────────────────────────────────────────────────────
+# ── Persistence
 _store = VeriLedgerStore()
 
-# ── In-memory state (now backed by SQLite — restored on startup below) ───────
+
 _graph   = ForgeryGraph()
 _engine  = VelocityEngine()
 _docs:   dict[str, ExtractedDocument] = {}
@@ -76,10 +67,6 @@ async def _restore_state_from_db() -> None:
     _events = _store.load_all_velocity_events()
     print(f"[startup] Restored {len(_docs)} documents and {len(_events)} velocity events from {_store.db_path}")
 
-
-# ══════════════════════════════════════════════════════════════════════════════
-# ADAPTER: Person 1 → Person 2 (POST /ingest/ocr-output)
-# ══════════════════════════════════════════════════════════════════════════════
 
 class _P1ForensicSignals(BaseModel):
     """Mirrors Person 1's forensic_signals block exactly as they send it."""
@@ -109,8 +96,8 @@ class P1OCROutput(BaseModel):
       'rent_lease_agreement' | 'plan_approval_oc' | 'udyam_msme' | 'identity_document'
     """
     status:                    str = "success"
-    doc_type:                  str                    # ← Person 1 adds this
-    extracted_fields:          dict[str, Any]         # flat dict of all extracted fields
+    doc_type:                  str                    
+    extracted_fields:          dict[str, Any]         
     forensic_signals:          _P1ForensicSignals
     metadata:                  Optional[_P1Metadata] = None
     average_confidence:        Optional[float] = None
@@ -128,8 +115,7 @@ def _map_forensic(p1: _P1ForensicSignals) -> ForensicSignals:
         metadata_mismatch=p1.metadata_mismatch,
         font_inconsistency=p1.font_inconsistency,
         seal_score=p1.seal_score,
-        # Person 1 sends ocr_confidence as a percentage (e.g. 76.42).
-        # entities.py clamps it to [0, 1] — normalise here.
+        
         ocr_confidence=(p1.ocr_confidence / 100.0) if (p1.ocr_confidence and p1.ocr_confidence > 1.0) else p1.ocr_confidence,
         copy_paste_detected=p1.copy_paste_detected,
         shadow_artifacts=p1.shadow_artifacts,
