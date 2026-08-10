@@ -1,0 +1,270 @@
+@import url("header.css");
+@import url("sidebar.css");
+@import url("workspace.css");
+@import url("cards.css");
+@import url("responsive.css");
+
+/* =======================
+   GLOBAL STYLES
+======================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --primary:#083A73;
+    --accent:#F4B400;
+    --background:#F4F7FB;
+    --white:#FFFFFF;
+
+    --success:#28A745;
+    --warning:#FFC107;
+    --danger:#DC3545;
+
+    --text:#2C3E50;
+    --border:#D8E2EC;
+
+}
+
+body{
+
+    font-family:"Segoe UI",sans-serif;
+    background:var(--background);
+    color:var(--text);
+
+}
+
+.app-container{
+
+    overflow:hidden;
+
+}
+
+button{
+
+    border:none;
+    cursor:pointer;
+
+}
+
+select{
+
+    cursor:pointer;
+
+}
+/* ================= Pipeline ================= */
+
+.pipeline-step{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 18px;
+
+    margin-bottom:12px;
+
+    background:#f8fbff;
+
+    border:1px solid #dbe6f3;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    color:#1b3f73;
+
+    transition:all .35s ease;
+
+}
+
+.step-circle{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:#cfd8dc;
+
+    flex-shrink:0;
+
+}
+
+.step-circle.waiting{
+
+    background:#cfd8dc;
+
+}
+
+.step-circle.running{
+
+    background:#f4b400;
+
+    animation:pulse .8s infinite;
+
+}
+
+.step-circle.done{
+
+    background:#34a853;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.25);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+.ocr-text{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    background:#f8f9fa;
+    padding:20px;
+
+    border-radius:10px;
+
+    max-height:350px;
+    overflow-y:auto;
+
+    font-size:15px;
+}
+.report-card-home{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:50px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.report-icon{
+
+    font-size:72px;
+
+    color:#0d6efd;
+
+    margin-bottom:20px;
+
+}
+
+.view-report-btn{
+
+    margin-top:25px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:14px 30px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.view-report-btn:hover{
+
+    background:#0b5ed7;
+
+}
+
+.view-report-btn:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+}
+/* ===========================
+   FORENSIC ANALYSIS
+=========================== */
+
+.forensic-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:20px;
+
+    margin-top:20px;
+
+}
+
+.forensic-card{
+
+    background:#fff;
+
+    border-radius:14px;
+
+    padding:20px;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+
+    border-left:6px solid #1d4ed8;
+
+}
+
+.forensic-title{
+
+    font-size:16px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+    color:#1f2937;
+
+}
+
+.forensic-value{
+
+    color:#0f172a;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
