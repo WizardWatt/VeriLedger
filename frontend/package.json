@@ -1,0 +1,15 @@
+{
+  "name": "veriledger-desktop",
+  "version": "1.0.0",
+  "description": "Canara Bank Suraksha Hackathon - VeriLedger Desktop",
+  "main": "main.js",
+  "author": "Team VeriLedger",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^41.7.1"
+  }
+}

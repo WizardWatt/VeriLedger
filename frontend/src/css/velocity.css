@@ -1,0 +1,333 @@
+body{
+
+    background:#f4f7fc;
+
+    font-family:"Segoe UI",sans-serif;
+
+    color:#1b1b1b;
+
+}
+
+/* =======================================
+PAGE
+======================================= */
+
+.page-title{
+
+    color:#0d4c92;
+
+    font-size:54px;
+
+    font-weight:700;
+
+}
+
+.page-subtitle{
+
+    font-size:24px;
+
+    color:#666;
+
+}
+
+/* =======================================
+MAIN CARD
+======================================= */
+
+.main-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+/* =======================================
+SUMMARY CARDS
+======================================= */
+
+.summary-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    cursor:pointer;
+
+    height:180px;
+
+}
+
+.summary-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(13,76,146,.18);
+
+}
+
+.summary-card i{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.summary-card h2{
+
+    font-size:52px;
+
+    font-weight:700;
+
+    margin:10px 0;
+
+}
+
+.summary-card p{
+
+    font-size:20px;
+
+    margin:0;
+
+    color:#666;
+
+}
+
+/* =======================================
+CARD COLORS
+======================================= */
+
+.primary{
+
+    border-left:7px solid #0d6efd;
+
+}
+
+.primary i{
+
+    color:#0d6efd;
+
+}
+
+.primary h2{
+
+    color:#0d6efd;
+
+}
+
+.danger{
+
+    border-left:7px solid #dc3545;
+
+}
+
+.danger i{
+
+    color:#dc3545;
+
+}
+
+.danger h2{
+
+    color:#dc3545;
+
+}
+
+.warning{
+
+    border-left:7px solid #ffc107;
+
+}
+
+.warning i{
+
+    color:#ffc107;
+
+}
+
+.warning h2{
+
+    color:#f0a000;
+
+}
+
+.success{
+
+    border-left:7px solid #198754;
+
+}
+
+.success i{
+
+    color:#198754;
+
+}
+
+.success h2{
+
+    color:#198754;
+
+}
+
+/* =======================================
+TABLE
+======================================= */
+
+.table{
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+}
+
+.table thead{
+
+    background:#0d4c92;
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+.table thead th{
+
+    padding:18px;
+
+}
+
+.table tbody td{
+
+    padding:16px;
+
+    vertical-align:middle;
+
+}
+
+.table tbody tr:nth-child(even){
+
+    background:#f8fbff;
+
+}
+
+.table tbody tr:hover{
+
+    background:#edf5ff;
+
+    transition:.25s;
+
+}
+
+/* =======================================
+BADGES
+======================================= */
+
+.badge{
+
+    padding:10px 18px;
+
+    font-size:14px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+}
+
+.bg-low{
+
+    background:#198754;
+
+}
+
+.bg-medium{
+
+    background:#ffc107;
+
+    color:#000;
+
+}
+
+.bg-high{
+
+    background:#dc3545;
+
+}
+
+/* =======================================
+BUTTONS
+======================================= */
+
+.btn{
+
+    border-radius:14px;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.btn-primary{
+
+    background:#0d6efd;
+
+    border:none;
+
+}
+
+.btn-primary:hover{
+
+    background:#0b5ed7;
+
+}
+
+/* =======================================
+HEADINGS
+======================================= */
+
+.main-card h2{
+
+    color:#0d4c92;
+
+    font-weight:700;
+
+}
+
+.main-card small{
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+/* =======================================
+LOADING
+======================================= */
+
+.spinner-border{
+
+    width:55px;
+
+    height:55px;
+
+}

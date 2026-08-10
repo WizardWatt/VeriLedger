@@ -1,0 +1,475 @@
+/* =====================================================
+   REPORT PAGE
+===================================================== */
+
+html,
+body{
+
+    width:100%;
+
+    height:100%;
+
+    margin:0;
+
+    padding:0;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    background:#f4f7fb;
+
+    font-family:"Segoe UI",sans-serif;
+
+}
+
+body{
+
+    padding:20px;
+
+}
+
+#reportContainer{
+
+    width:100%;
+
+    overflow:visible;
+
+}
+
+.report-wrapper{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding-bottom:80px;
+
+}
+body {
+    background: #f4f7fb;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+}
+
+.report-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.report-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.report-header h1 {
+    color: #0d4c92;
+    font-weight: 700;
+}
+
+.report-header p {
+    color: #6c757d;
+    font-size: 17px;
+}
+
+.loading {
+    text-align: center;
+    padding: 80px;
+}
+
+/* =====================================================
+   COMMON CARD
+===================================================== */
+
+.summary-card,
+.info-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+    transition: all 0.3s ease;
+}
+
+.summary-card:hover,
+.info-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .12);
+}
+
+.summary-card h2,
+.info-card h2 {
+    color: #0d4c92;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+/* =====================================================
+   SUMMARY GRID
+===================================================== */
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.summary-item {
+    background: #f8fbff;
+    border: 1px solid #dbe7f5;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.summary-item:hover {
+    background: #f0f6ff;
+    border-color: #0d4c92;
+    transform: translateY(-2px);
+}
+
+.summary-item .label {
+    display: block;
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.summary-item span:last-child {
+    color: #0d4c92;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.summary-item .badge {
+    font-size: 18px;
+    padding: 8px 20px;
+}
+
+/* =====================================================
+   INFO GRID
+===================================================== */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.info-item {
+    background: #f8fbff;
+    border-radius: 12px;
+    border: 1px solid #dbe7f5;
+    padding: 18px;
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    background: #f0f6ff;
+    border-color: #0d4c92;
+    transform: translateY(-2px);
+}
+
+.info-item .label {
+    display: block;
+    color: #666;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-item span:last-child {
+    color: #163b74;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* =====================================================
+   EXTRACTED FIELDS
+===================================================== */
+
+.fields-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.field-card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    border-left: 5px solid #0d6efd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+    transition: all 0.3s ease;
+}
+
+.field-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .12);
+}
+
+.field-title {
+    color: #6c757d;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.field-value {
+    color: #163b74;
+    font-size: 18px;
+    font-weight: 700;
+    word-break: break-word;
+}
+
+/* =====================================================
+   BADGE
+===================================================== */
+
+.badge {
+    font-size: 15px;
+    padding: 8px 15px;
+    border-radius: 30px;
+}
+
+.badge.bg-danger {
+    background-color: #dc3545 !important;
+    color: white !important;
+}
+
+.badge.bg-warning {
+    background-color: #ffc107 !important;
+    color: #000 !important;
+}
+
+.badge.bg-success {
+    background-color: #28a745 !important;
+    color: white !important;
+}
+
+.badge.bg-info {
+    background-color: #17a2b8 !important;
+    color: white !important;
+}
+
+/* =====================================================
+   OCR TEXT
+===================================================== */
+
+.ocr-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.ocr-toolbar .btn {
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.ocr-toolbar .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+}
+
+.ocr-box {
+    background: #f8fbff;
+    border: 1px solid #d8e5f6;
+    border-radius: 10px;
+    padding: 20px;
+    max-height: 350px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #163b74;
+    font-family: 'Courier New', monospace;
+}
+
+.ocr-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.ocr-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.ocr-box::-webkit-scrollbar-thumb {
+    background: #0d4c92;
+    border-radius: 10px;
+}
+
+/* =====================================================
+   FORENSIC SECTION - ADDITIONAL STYLES
+===================================================== */
+
+/* Risk score styling */
+.text-danger {
+    color: #dc3545 !important;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Key findings list */
+.list-group {
+    margin: 0;
+    padding: 0;
+}
+
+.list-group-item {
+    background: transparent !important;
+    border: none !important;
+    padding: 8px 0 !important;
+    color: #333;
+}
+
+.list-group-item i {
+    font-size: 18px;
+}
+
+/* Alert styling */
+.alert {
+    padding: 30px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+}
+
+.alert-danger {
+    border-left: 6px solid #dc3545;
+}
+
+.alert h3 {
+    color: #dc3545;
+    margin-bottom: 15px;
+}
+
+/* Footer styling */
+.tracking-wider {
+    letter-spacing: 0.5px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .fields-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .report-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 15px;
+    }
+    
+    .report-header .text-end {
+        text-align: left !important;
+        width: 100%;
+    }
+    
+    .summary-card,
+    .info-card {
+        padding: 20px;
+    }
+    
+    .summary-item span:last-child {
+        font-size: 18px;
+    }
+    
+    .info-item span:last-child {
+        font-size: 16px;
+    }
+    
+    .field-value {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .report-wrapper {
+        padding: 10px;
+    }
+    
+    .summary-card h2,
+    .info-card h2 {
+        font-size: 18px;
+    }
+    
+    .ocr-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .ocr-toolbar .btn {
+        width: 100%;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white !important;
+        padding: 0 !important;
+    }
+    
+    .report-wrapper {
+        max-width: 100% !important;
+    }
+    
+    .summary-card,
+    .info-card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        page-break-inside: avoid;
+    }
+    
+    .ocr-toolbar {
+        display: none !important;
+    }
+    
+    .field-card:hover,
+    .info-item:hover,
+    .summary-item:hover {
+        transform: none !important;
+    }
+}
+.container-fluid{
+    overflow:visible !important;
+}
+
+.summary-card,
+.info-card{
+    display:block;
+    width:100%;
+    overflow:visible;
+}

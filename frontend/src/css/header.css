@@ -1,0 +1,141 @@
+.top-header{
+
+    height:80px;
+
+    background:var(--primary);
+
+    border-bottom:4px solid var(--accent);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 30px;
+
+}
+
+.logo-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo{
+
+    width:48px;
+
+    height:48px;
+
+}
+
+.logo-section h3{
+
+    color:white;
+
+    margin:0;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+.logo-section span{
+
+    color:#d9e6f4;
+
+    font-size:14px;
+
+}
+
+.status-section{
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+/* ============================= */
+/* STATUS CARDS */
+/* ============================= */
+
+.status-card{
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:28px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.18);
+
+    transition:0.25s ease;
+
+}
+
+.status-card:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* OCR - Royal Blue */
+.status-card.ocr{
+    background:#2563EB;
+}
+
+/* Analysis - Deep Violet */
+.status-card.analysis{
+    background:#7C3AED;
+}
+
+/* Velocity - Emerald Green */
+.status-card.velocity{
+    background:#059669;
+}
+.status-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:white;
+
+}
+
+.offline{
+
+    background:#ef4444;
+
+}
+
+.online{
+
+    background:#22c55e;
+
+}
+
+.checking{
+
+    background:#f59e0b;
+
+}
